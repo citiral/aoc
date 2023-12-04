@@ -10,17 +10,17 @@ pub fn part1(input: &str) {
             .map(|h| h.trim())
             .map(|h| {
                 h.split(", ")
-                 .map(|color| {
+                    .map(|color| {
                     let mut split = color.split(' ');
                     (split.next().unwrap().parse::<u32>().unwrap(), split.next().unwrap())
                 })
-                 .map(|(count, color)| match color {
+                    .map(|(count, color)| match color {
                     "red" => count <= 12,
                     "green" => count <= 13,
                     "blue" => count <= 14,
                     _ => panic!("Invalid color {}", color)
-                 })
-                 .all(|x| x)
+                    })
+                    .all(|x| x)
             })
             .all(|x| x);
 
