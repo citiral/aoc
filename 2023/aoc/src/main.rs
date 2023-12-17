@@ -4,12 +4,14 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day5;
+mod day6;
+mod day7;
+mod day8;
 mod day9;
-
-trait Day {
-    fn part1(input: &str);
-    fn part2(input: &str);
-}
+mod day10;
+mod day11;
+mod day12;
 
 macro_rules! d{
     ($d:ident) => {
@@ -29,7 +31,14 @@ fn main() {
             "day2" => d!(day2),
             "day3" => d!(day3),
             "day4" => d!(day4),
+            "day5" => d!(day5),
+            "day6" => d!(day6),
+            "day7" => d!(day7),
+            "day8" => d!(day8),
             "day9" => d!(day9),
+            "day10" => d!(day10),
+            "day11" => d!(day11),
+            "day12" => d!(day12),
             _ => {
                 println!("Invalid day: '{day}'.");
                 exit(1);
