@@ -4,6 +4,7 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day9;
 
 trait Day {
     fn part1(input: &str);
@@ -28,6 +29,7 @@ fn main() {
             "day2" => d!(day2),
             "day3" => d!(day3),
             "day4" => d!(day4),
+            "day9" => d!(day9),
             _ => {
                 println!("Invalid day: '{day}'.");
                 exit(1);
